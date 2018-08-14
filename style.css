@@ -1,0 +1,48 @@
+#Display {
+
+color: white;
+float: left;
+
+}
+#player{
+
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: black;
+  color: white;
+   /* padding-right: 20px; */
+  /* float: left; */
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+}
+
+#play img{
+width:50px;
+
+}
+#foward img{
+width:30px;
+padding-top: 10px;
+
+}
+#prev img{
+width:30px;
+-webkit-transform: scaleX(-1);
+transform: scaleX(-1);
+padding-top: 10px;
+}
+
+.box{
+ width:15%;
+  display: flex;
+  justify-content: space-between;
+}
