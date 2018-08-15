@@ -25,10 +25,10 @@ function togglePlay(song){
     if (isPlay){
       audio.pause()
       isPlay = false
-      document.getElementById("play-img").src= "assets/webPlayer/Images/play.png";
+      document.getElementById("play-img").src= "assets/WebPlayer/Images/play.png";
     }else{
       isPlay =true;
-      document.getElementById("play-img").src = "assets/webPlayer/Images/pause.png";
+      document.getElementById("play-img").src = "assets/WebPlayer/Images/pause.png";
       document.getElementById("play-img").style.width = "50px";
       playsound(song);
     }

@@ -18,10 +18,6 @@ handlers:
 #Web Player CSS
 - url: /assets/WebPlayer/Style
   static_dir: assets/WebPlayer/Style
-#Web Player Images
-- url: /assets/WebPlayer/Images/play\.png
-  static_dir: /assets/WebPlayer/Images/play.png
-  #upload: /assets/WebPlayer/Images/play\.png
 
 #Web Player Scripts
 - url: /assets/WebPlayer/Scripts
@@ -32,10 +28,6 @@ handlers:
 #Music Library Music
 - url: /assets/MusicLibrary/Music
   static_dir: assets/MusicLibrary/Music
-#Music Library Images
-- url: /assets/WebPlayer/Title-Images
-  static_dir: assets/WebPlayer/Title-Images
-  # upload: assets/WebPlayer/Title-Images
 
 
 #new handlers should go ABOVE the catch all url (.*)
