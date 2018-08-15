@@ -4,10 +4,16 @@ runtime: python27
 api_version: 1
 threadsafe: yes
 
+
 handlers:
 # - url: /favicon\.ico
 #   static_files: favicon.ico
 #   upload: favicon\.ico
+
+- url: /(.*\.(gif|png|jpg|ico|js|css|jpeg))
+  static_files: \1
+  upload: (.*\.(gif|png|jpg|ico|js|css|jpeg))
+
 
 #Web Player CSS
 - url: /assets/WebPlayer/Style
@@ -15,7 +21,7 @@ handlers:
 #Web Player Images
 - url: /assets/WebPlayer/Images/play\.png
   static_dir: /assets/WebPlayer/Images/play.png
-  upload: /assets/WebPlayer/Images/play\.png
+  #upload: /assets/WebPlayer/Images/play\.png
 
 #Web Player Scripts
 - url: /assets/WebPlayer/Scripts
