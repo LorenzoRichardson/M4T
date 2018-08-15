@@ -1,0 +1,44 @@
+application: mt
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+# - url: /favicon\.ico
+#   static_files: favicon.ico
+#   upload: favicon\.ico
+
+#Web Player CSS
+- url: /assets/WebPlayer/Style
+  static_dir: assets/WebPlayer/Style
+#Web Player Images
+- url: /assets/WebPlayer/Images/play\.png
+  static_dir: /assets/WebPlayer/Images/play.png
+  upload: /assets/WebPlayer/Images/play\.png
+
+#Web Player Scripts
+- url: /assets/WebPlayer/Scripts
+  static_dir: assets/WebPlayer/Scripts
+
+#------------------------------------------------------------------
+
+#Music Library Music
+- url: /assets/MusicLibrary/Music
+  static_dir: assets/MusicLibrary/Music
+#Music Library Images
+- url: /assets/WebPlayer/Title-Images
+  static_dir: assets/WebPlayer/Title-Images
+  # upload: assets/WebPlayer/Title-Images
+
+
+#new handlers should go ABOVE the catch all url (.*)
+- url: .*
+  script: main.app
+
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+- name: jinja2
+  version: "2.6"

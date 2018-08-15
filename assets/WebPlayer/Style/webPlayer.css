@@ -2,7 +2,8 @@
 
 color: white;
 float: left;
-
+padding-left: 15px;
+/* width:15%; */
 }
 #player{
 
@@ -19,6 +20,7 @@ float: left;
 }
 
 body {
+    font-family: 'Roboto', sans-serif;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -45,4 +47,25 @@ padding-top: 10px;
  width:15%;
   display: flex;
   justify-content: space-between;
+  padding-right: 50px;
+}
+
+#Display-img{
+  float: left;
+  width: 70px;
+  height: 70px;
+}
+
+#song-title{
+float: right;
+padding-left: 20px;
+padding-top: 7px;
+
+
+}
+
+#song-artist{
+color: grey;
+
+
 }
