@@ -1,0 +1,190 @@
+
+/* Dropdown Button */
+.dropbtn {
+    background-color:black;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+    float: left;
+    width: 15%;
+    height: 825px; /* only for demonstration, should be removed */
+    background: #000000;
+    padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+rightside {
+    float: left;
+    padding: 20px;
+    width: 85%;
+    background-color: #ccc;
+    height: 825px;
+}
+
+
+
+section:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.navigation {
+  background-color: #000000;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.navigation:hover, .navigation:focus {
+    background-color: #2980B9;
+  }
+
+button{
+  border: none;
+  cursor: pointer;
+  background-color: #000000;
+
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+
+#Display {
+    height: auto;
+    max-width: 640px;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+#Display.expanded {
+    max-width: 2000px;
+}
+
+nav scrollbar ul{
+  height:200px; width:110%;
+  color: white;
+
+}
+nav scrollbar ul{
+  overflow:hidden; overflow-y:scroll;
+
+}
+
+
+#defaultCanvas0{
+  position:absolute;
+  top: 200px;
+  left: 200px;
+  width: 200px;
+  height: 200px;
+}
+/*--------------------------------------------------------------------------*/
+
+
+/* body {
+    margin: 0;
+    overflow: hidden;
+    color: white;
+} */
+input {
+  display: flex;
+    position: relative;
+    top: 15px;
+    left: 15px;
+}
+.loader {
+    font-family: sans-serif;
+    position: absolute;
+    /* top: 50%;
+    left: 50%; */
+    transform: translate(-50% -50%);
+    display: none;
+}
+.loader.loading  {
+   display: block;
+   width: 500px;
+   height: 500px;
+    }
+
+/* canvas {
+  display: flex;
+  position: absolute;
+  background-color: green;
+  float: right;
+
+} */

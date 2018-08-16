@@ -43,7 +43,7 @@ def remove_selection():
         try:
             to_remove = int(input('To remove a selection enter the number of the selection you want removed here. >>> '))
             if to_remove <= len(playlist_):
-            break
+                break
         except ValueError:
             print('Enter a number.')
             remove_selection()
