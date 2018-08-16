@@ -1,4 +1,3 @@
-
 /* Dropdown Button */
 .dropbtn {
     background-color:black;
@@ -45,25 +44,22 @@
 .show {display:block;}
 
 
-
-
-
-
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Create two columns/boxes that floats next to each other */
 nav {
     float: left;
     width: 15%;
-    height: 825px; /* only for demonstration, should be removed */
+    height: 100%; /* only for demonstration, should be removed */
     background: #000000;
     padding: 20px;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Style the list inside the menu */
@@ -72,12 +68,13 @@ nav ul {
     padding: 0;
 }
 
-rightside {
+#rightside {
     float: left;
     padding: 20px;
     width: 85%;
-    background-color: #ccc;
-    height: 825px;
+    background-color: #444444;
+    height: 100%;
+    color: white;
 }
 
 
@@ -156,17 +153,16 @@ nav scrollbar ul{
 /*--------------------------------------------------------------------------*/
 
 
-body {
+/* body {
     margin: 0;
     overflow: hidden;
     color: white;
-}
+} */
 input {
   display: flex;
     position: relative;
     top: 15px;
     left: 15px;
-    color: black;
 }
 .loader {
     font-family: sans-serif;
@@ -181,18 +177,39 @@ input {
    width: 500px;
    height: 500px;
     }
-canvas {
+
+/* canvas {
   display: flex;
-  position: relative;
-  background:black;
+  position: absolute;
+  background-color: green;
   float: right;
-  padding-bottom: 25px;
-  padding-right: 25px;
+} */
+
+.songListshow{
+  list-style: none;
 
 
 }
 
-/*-----------------------------------------------------------------*/
+#listImg{
+padding-right: 20px;
+ padding-top: 15px;
+  width: 50px;
+  padding-bottom: 2px;
+}
+
+
+#titles{
+
+  /* float:right; */
+}
+
+.verticalLine {
+  border-top: 1px solid grey;
+  width:100%;
+}
+
+
 
 .boxes{
   height: 100px;
@@ -291,7 +308,7 @@ h2{
   left: 450px;
   /* top:
   font-weight:bold; */
-  font-size: 50px;
+  /* font-size: 50px; */
 }
 
 #relaxed{
@@ -302,8 +319,8 @@ h2{
   float: left;
   /* top:
   font-weight:bold; */
-  font-size: 50px;
-  left: 1180px;
+  font-size: 20px;
+  /* left: 1180px; */
 }
 #sad{
   display:flex;
@@ -313,8 +330,8 @@ h2{
   float: left;
   /* top:
   font-weight:bold; */
-  font-size: 50px;
-  left: 1670px;
+  font-size: 20px;
+  /* left: 1670px; */
 }
 #stressed{
   display:flex;
@@ -324,8 +341,8 @@ h2{
   float: left;
   /* top:
   font-weight:bold; */
-  font-size: 50px;
-  left: 450px;
+  font-size: 20px;
+  /* left: 450px; */
 }
 #normal{
   display:flex;
@@ -335,7 +352,7 @@ h2{
   float: left;
   /* font-weight:bold; */
   font-size: 50px;
-  left: 1180px;
+  /* left: 1180px; */
 }
 #mixed_emotions{
   display:flex;
@@ -344,8 +361,8 @@ h2{
   position: absolute;
   float: left;
   /* font-weight:bold; */
-  font-size: 50px;
-  left: 1625px;
+  font-size: 20px;
+  /* left: 1625px; */
 }
 #nervous{
   display:flex;
@@ -355,8 +372,8 @@ h2{
   float: left;
   /* top: */
   /* font-weight:bold; */
-  font-size: 50px;
-  left: 450px;
+  font-size: 20px;
+  /* left: 450px; */
 }
 #passion{
   display:flex;
@@ -365,8 +382,8 @@ h2{
   position: absolute;
   float: left;
   /* font-weight:bold; */
-  font-size: 50px;
-  left: 1180px;
+  font-size: 20px;
+  /* left: 1180px; */
 }
 #love{
   display:flex;
@@ -375,8 +392,8 @@ h2{
   position: absolute;
   float: left;
   /* font-weight:bold; */
-  font-size: 50px;
-  left: 1650px;
+  font-size: 20px;
+  /* left: 1650px; */
 }
 #cool{
   display:flex;
@@ -386,8 +403,8 @@ h2{
   float: left;
   /* top: */
   /* font-weight:bold; */
-  font-size: 50px;
-  left: 450px;
+  font-size: 20px;
+  /* left: 450px; */
 }
 #calm{
   display:flex;
@@ -396,8 +413,8 @@ h2{
   position: absolute;
   float: left;
   /* font-weight:bold; */
-  font-size: 50px;
-  left: 1180px;
+  font-size: 20px;
+  /* left: 1180px; */
 }
 #optimistic{
   display:flex;
@@ -406,8 +423,8 @@ h2{
   position: absolute;
   float: left;
   /* font-weight:bold; */
-  font-size: 50px;
-  left: 1540px;
+  font-size: 20px;
+  /* left: 1540px; */
 }
 #aggressive{
   display:flex;
@@ -418,7 +435,7 @@ h2{
   /* top:
   font-weight:bold; */
   font-size: 50px;
-  left: 450px;
+  /* left: 450px; */
 }
 #secure{
   display:flex;
@@ -427,8 +444,8 @@ h2{
   position: absolute;
   float: left;
   /* font-weight:bold; */
-  font-size: 50px;
-  left: 1180px;
+  font-size: 20px;
+  /* left: 1180px; */
 }
 #energetic{
   display:flex;
@@ -437,7 +454,7 @@ h2{
   position: absolute;
   float: left;
   /* font-weight:bold; */
-  font-size: 50px;
-  left: 1550px;
+  font-size: 20px;
+  /* left: 1550px; */
 }
 /*----------------------------------------------------------------------------------------------------------------------------*/

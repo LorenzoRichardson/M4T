@@ -10,9 +10,9 @@ handlers:
 #   static_files: favicon.ico
 #   upload: favicon\.ico
 
-- url: /(.*\.(gif|png|jpg|ico|js|css|jpeg))
+- url: /(.*\.(gif|png|jpg|ico|js|css|jpeg|mp4))
   static_files: \1
-  upload: (.*\.(gif|png|jpg|ico|js|css|jpeg))
+  upload: (.*\.(gif|png|jpg|ico|js|css|jpeg|mp4))
 
 
 #Web Player CSS
@@ -28,6 +28,19 @@ handlers:
 #Music Library Music
 - url: /assets/MusicLibrary/Music
   static_dir: assets/MusicLibrary/Music
+
+#------------------------------------------------------------------
+
+#login page CSS
+- url: /assets/Login/Styles
+  static_dir: assets/Login/Styles
+
+#login Player Scripts
+- url: /assets/Login/Scripts
+  static_dir: assets/Login/Scripts
+
+#----------------------------------------------------------------
+
 
 
 #new handlers should go ABOVE the catch all url (.*)

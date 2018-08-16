@@ -2,10 +2,6 @@ var playbutton = document.getElementById("play");
 var prevbutton = document.getElementById("prev");
 var fowardbutton = document.getElementById("foward");
 //var display = document.getElementById("Display");
-let display1 = document.querySelector('#Display');
-let playlist = document.querySelector('#Playlist')
-
-const colors = ['red','pink','orange','yellow','blue'];
 
 var songList = ['assets/MusicLibrary/Music/pink.wav', 'assets/MusicLibrary/Music/jordy.mp3','assets/MusicLibrary/Music/Clout_Cobain.mp3','assets/MusicLibrary/Music/Black_Balloons.mp3','assets/MusicLibrary/Music/Lucid_Dreams.mp3','assets/MusicLibrary/Music/BrunoMars_Finesse.mp3','assets/MusicLibrary/Music/Cold.mp3','assets/MusicLibrary/Music/RipAndTear.mp3','assets/MusicLibrary/Music/YeahRight.mp3','assets/MusicLibrary/Music/Goosebumps.mp3','assets/MusicLibrary/Music/ShapeOfYou.mp3','assets/MusicLibrary/Music/Flashing_Lights.mp3'];
 var songTitle = ['Pink', 'Jordy', 'Clout Cobain', 'Black Balloons', 'Lucid Dreams', 'Finesse (Remix)','Rich Brian - Cold','Doom Soundtrack - Rip & Tear','Joji - Yeah Right','Travis Scott - GooseBumps','Ed Sheeran - Shape Of You','Kanye West - Flashing Lights ']
@@ -14,12 +10,21 @@ var songArtist = ['Pink','Jordy','Denzel Curry','Denzel Curry','Juice WRLD','Bru
 var position = 0;
 var isPlay =false;
 
-Display.addEventListener('click', enlarge);
+
+var yellow = document.getElementById("box1");
+var yellowGreen = document.getElementById("box6");
+var pink = document.getElementById("box9");
+var orange = document.getElementById("box15");
+
+var blue = document.getElementById("box2");
+var grey = document.getElementById("box3");
+
+
 
 function display()
 {
 document.getElementById("Display").innerHTML = `    <div id="song-title">${songTitle[position]}
-                                                      <p><div id="song-artist">${songArtist[position]}</div></p>
+                                                      <p><div id="song-artist">Zayslash</div></p>
                                                            </div>
                                                     <img id="Display-img" src=${pictureList[position]}>`;
 
@@ -27,74 +32,20 @@ document.getElementById("Display").innerHTML = `    <div id="song-title">${songT
 // document.getElementById("Display").innerHTML = `<div id="song-title">title</div>`
 }
 
-function togglePlay(song){
-
+function togglePlay(song,specify){
     if (isPlay){
       audio.pause()
       isPlay = false
-      document.getElementById("play-img").src= "assets/WebPlayer/Images/play.png";
+      document.getElementById(specify).src= "assets/WebPlayer/Images/play.png";
     }else{
       isPlay =true;
-      document.getElementById("play-img").src = "assets/WebPlayer/Images/pause.png";
-      document.getElementById("play-img").style.width = "50px";
-
-      // var fft, // Allow us to analyze the song
-      //     numBars = 1024; // The number of bars to use; power of 2 from 16 to 1024
-      //     // song; // The p5 sound object
-      // // Load our song
-      // // var loader = document.querySelector(".loader");
-      // // document.getElementById("audiofile").onchange = function(event) {
-      // //     if(event.target.files[0]) {
-      // //         if(typeof song != "undefined") { // Catch already playing songs
-      // //             song.disconnect();
-      // //             song.stop();
-      // //         }
-      //
-      //         // Load our new song
-      //         // song = audio;
-      //         //loader.classList.add("loading");
-      //         console.log("Hi");
-      //         // setup();
-      //         // draw();
-      // //     }
-      // // }
-      //
-      // var canvas;
-      // function setup() { // Setup p5.js
-      //     canvas = createCanvas(450, 100);
-      // }
-      //
-      // function draw() {
-      //     background(0);
-      //
-      //     if(typeof song != "undefined"
-      //        && song.isLoaded()
-      //        && !song.isPlaying()) { // Do once
-      //         loader.classList.remove("loading");
-      //
-      //         song.play();
-      //         song.setVolume(0.5);
-      //
-      //         fft = new p5.FFT();
-      //         fft.waveform(numBars);
-      //         fft.smooth(0.85);
-      //     }
-      //
-      //     if(typeof fft != "undefined") {
-      //         var spectrum = fft.analyze();
-      //         noStroke();
-      //         fill("rgb(0, 205, 255)");
-      //         for(var i = 0; i < numBars; i++) {
-      //             var x = map(i, 0, numBars, 0, width);
-      //             var h = -height + map(spectrum[i], -25, 1000, height, -200);
-      //             rect(x, height, width / numBars, h);
-      //         }
-      //     }
-      // }
-
+      document.getElementById(specify).src = "assets/WebPlayer/Images/pause.png";
+      document.getElementById(specify).style.width = "50px";
       playsound(song);
     }
 }
+
+
 
 function playsound(song){
 audio = new Audio(song);
@@ -125,15 +76,13 @@ function prevSong(){
   }
 }
 
-function enlarge(){
-
-
-}
-
 playbutton.onclick = function(){
-togglePlay(songList[position]);
+togglePlay(songList[position],"play-img");
 display()
 }
+
+
+
 
 fowardbutton.onclick = function(){
 nextSong();
@@ -144,21 +93,7 @@ prevbutton.onclick =  function(){
 prevSong();
 display();
 
-
-
 }
-
-
-
-
-
-
-
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-}
-
-
 
 function loaders(){
 display();
@@ -168,70 +103,58 @@ loaders();
 
 
 
-var fft, // Allow us to analyze the song
-    numBars = 1024, // The number of bars to use; power of 2 from 16 to 1024
-    song; // The p5 sound object
-// Load our song
-var loader = document.querySelector(".loader");
-document.getElementById("audiofile").onchange = function(event) {
-    if(event.target.files[0]) {
-        if(typeof song != "undefined") { // Catch already playing songs
-            song.disconnect();
-            song.stop();
-        }
+var rightside = document.getElementById("rightside");
+var playlist = document.getElementById("playlist");
+var songs = document.getElementById("songs");
 
-        // Load our new song
-        song = loadSound(URL.createObjectURL(event.target.files[0]));
-        loader.classList.add("loading");
-        console.log("Hi");
-        setup();
-        draw();
-    }
-}
 
-var canvas;
-function setup() { // Setup p5.js
-    canvas = createCanvas(450, 100);
-}
 
-function draw() {
-    background(0);
+// playlist.onclick = function(){
+//
+//
+//
+// }
 
-    if(typeof song != "undefined"
-       && song.isLoaded()
-       && !song.isPlaying()) { // Do once
-        loader.classList.remove("loading");
 
-        song.play();
-        song.setVolume(0.5);
 
-        fft = new p5.FFT();
-        fft.waveform(numBars);
-        fft.smooth(0.85);
-    }
+yellow.onclick = function(){
+  position =3
+  togglePlay(songList[position],"play-img");
+  display()
 
-    if(typeof fft != "undefined") {
-        var spectrum = fft.analyze();
-        noStroke();
-        fill("rgb(0, 205, 255)");
-        for(var i = 0; i < numBars; i++) {
-            var x = map(i, 0, numBars, 0, width);
-            var h = -height + map(spectrum[i], -25, 1000, height, -200);
-            rect(x, height, width / numBars, h);
-        }
-    }
+
 }
 
 
+yellowGreen.onclick = function(){
+  position =6
+  togglePlay(songList[position],"play-img");
+  display()
+}
 
+pink.onclick = function(){
+  position =7
+  togglePlay(songList[position],"play-img");
+  display()
+}
 
-// window.addEventListener("keypress", v => {
-//   // console.log("my key:",v.key);
-//   if (v.key === '(space)'){
-//     togglePlay(songList[position]);
-//     console.log("Hi");
-//   }
-// })
+orange.onclick = function(){
+  position =8
+  togglePlay(songList[position],"play-img");
+  display()
+}
+
+blue.onclick = function(){
+  position =1
+  togglePlay(songList[position],"play-img");
+  display()
+}
+
+grey.onclick = function(){
+  position =0
+  togglePlay(songList[position],"play-img");
+  display()
+}
 
 document.addEventListener("keydown", function(event) {
   if (event.keyCode === 32){

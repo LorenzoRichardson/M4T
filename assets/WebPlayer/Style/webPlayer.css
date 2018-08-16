@@ -69,3 +69,15 @@ color: grey;
 
 
 }
+
+#volume{
+display: flex;
+flex: end;
+padding-top: 15px;
+padding-left: 140px;
+}
+
+
+#songlist{
+  padding-left: 20px;
+}
