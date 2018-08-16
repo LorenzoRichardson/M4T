@@ -156,16 +156,17 @@ nav scrollbar ul{
 /*--------------------------------------------------------------------------*/
 
 
-/* body {
+body {
     margin: 0;
     overflow: hidden;
     color: white;
-} */
+}
 input {
   display: flex;
     position: relative;
     top: 15px;
     left: 15px;
+    color: black;
 }
 .loader {
     font-family: sans-serif;
@@ -180,11 +181,263 @@ input {
    width: 500px;
    height: 500px;
     }
-
-/* canvas {
+canvas {
   display: flex;
-  position: absolute;
-  background-color: green;
+  position: relative;
+  background:black;
   float: right;
+  padding-bottom: 25px;
+  padding-right: 25px;
 
-} */
+
+}
+
+/*-----------------------------------------------------------------*/
+
+.boxes{
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  margin: 10px;
+}
+
+/*-----------------------------------------------------------------------------------------------------------*/
+
+#box1{
+  background-color: yellow;
+  float: left;
+}
+#box2{
+  background-color: aqua;
+}
+#box3{
+  background-color: gray;
+}
+#box4{
+  background-color: darkgrey;
+}
+#box5{
+  background-color: deepskyblue ;
+}
+#box6{
+  background-color: yellowgreen;
+}
+#box7{
+  background-color: dimgray;
+}
+#box8{
+  background-color: red;
+}
+#box9{
+  background-color: deeppink;
+}
+#box10{
+  background-color: skyblue;
+}
+#box11{
+  background-color: powderblue;
+}
+#box12{
+  background-color: yellow;
+}
+#box13{
+  background-color: purple;
+}
+#box14{
+  background-color: black;
+}
+#box15{
+  background-color: orange;
+}
+
+/*-------------------------------------------------------------------------------------------------------------*/
+h2{
+  font-weight: bold;
+  font-size: 70px;
+  display: flex;
+  /* background-color: #ccc; */
+  margin: 10px;
+
+}
+
+
+.container{
+  /* float: right; */
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.moods{
+  /* display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  float: left;
+  left: 450px;
+  top: 190px;
+  font-weight:bold;
+  font-size: 50px; */
+}
+
+/*---------------------------------------------------------------------------------------------------------------------*/
+
+#cheerful{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  float: left;
+  left: 450px;
+  /* top:
+  font-weight:bold; */
+  font-size: 50px;
+}
+
+#relaxed{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  float: left;
+  /* top:
+  font-weight:bold; */
+  font-size: 50px;
+  left: 1180px;
+}
+#sad{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  float: left;
+  /* top:
+  font-weight:bold; */
+  font-size: 50px;
+  left: 1670px;
+}
+#stressed{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  float: left;
+  /* top:
+  font-weight:bold; */
+  font-size: 50px;
+  left: 450px;
+}
+#normal{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  float: left;
+  /* font-weight:bold; */
+  font-size: 50px;
+  left: 1180px;
+}
+#mixed_emotions{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  float: left;
+  /* font-weight:bold; */
+  font-size: 50px;
+  left: 1625px;
+}
+#nervous{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  float: left;
+  /* top: */
+  /* font-weight:bold; */
+  font-size: 50px;
+  left: 450px;
+}
+#passion{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  float: left;
+  /* font-weight:bold; */
+  font-size: 50px;
+  left: 1180px;
+}
+#love{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  float: left;
+  /* font-weight:bold; */
+  font-size: 50px;
+  left: 1650px;
+}
+#cool{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  float: left;
+  /* top: */
+  /* font-weight:bold; */
+  font-size: 50px;
+  left: 450px;
+}
+#calm{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  float: left;
+  /* font-weight:bold; */
+  font-size: 50px;
+  left: 1180px;
+}
+#optimistic{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  float: left;
+  /* font-weight:bold; */
+  font-size: 50px;
+  left: 1540px;
+}
+#aggressive{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  float: left;
+  /* top:
+  font-weight:bold; */
+  font-size: 50px;
+  left: 450px;
+}
+#secure{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  float: left;
+  /* font-weight:bold; */
+  font-size: 50px;
+  left: 1180px;
+}
+#energetic{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  float: left;
+  /* font-weight:bold; */
+  font-size: 50px;
+  left: 1550px;
+}
+/*----------------------------------------------------------------------------------------------------------------------------*/
