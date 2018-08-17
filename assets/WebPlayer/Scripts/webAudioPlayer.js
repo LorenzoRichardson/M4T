@@ -5,19 +5,27 @@ var fowardbutton = document.getElementById("foward");
 
 var songList = ['assets/MusicLibrary/Music/pink.wav', 'assets/MusicLibrary/Music/jordy.mp3','assets/MusicLibrary/Music/Clout_Cobain.mp3','assets/MusicLibrary/Music/Black_Balloons.mp3','assets/MusicLibrary/Music/Lucid_Dreams.mp3','assets/MusicLibrary/Music/BrunoMars_Finesse.mp3','assets/MusicLibrary/Music/Cold.mp3','assets/MusicLibrary/Music/RipAndTear.mp3','assets/MusicLibrary/Music/YeahRight.mp3','assets/MusicLibrary/Music/Goosebumps.mp3','assets/MusicLibrary/Music/ShapeOfYou.mp3','assets/MusicLibrary/Music/Flashing_Lights.mp3'];
 var songTitle = ['Pink', 'Jordy', 'Clout Cobain', 'Black Balloons', 'Lucid Dreams', 'Finesse (Remix)','Rich Brian - Cold','Doom Soundtrack - Rip & Tear','Joji - Yeah Right','Travis Scott - GooseBumps','Ed Sheeran - Shape Of You','Kanye West - Flashing Lights ']
-var pictureList = ['assets/MusicLibrary/Title-Images/pink.jpeg','assets/MusicLibrary/Title-Images/jordy.jpeg','assets/MusicLibrary/Title-Images/Clout_Cobain.png','assets/MusicLibrary/Title-Images/Black_Balloons.jpg','assets/MusicLibrary/Title-Images/Lucid_Dreams.jpg','assets/MusicLibrary/Title-Images/Finesse_.jpg','assets/MusicLibrary/Title-Images/c27f3271d72101753459d141983058d3.1000x1000x1.jpg','assets/MusicLibrary/Title-Images/maxresdefault.jpg','assets/MusicLibrary/Title-Images/download (1).jpeg','assets/MusicLibrary/Title-Images/51wf0kkUARL._SS500.jpg','assets/MusicLibrary/Title-Images/download.jpeg','assets/MusicLibrary/Title-Images/220px-Flashinglights.png'];
+var pictureList = ['assets/MusicLibrary/Title-Images/pink.jpeg','assets/MusicLibrary/Title-Images/jordy.jpeg','assets/MusicLibrary/Title-Images/Clout_Cobain.png','assets/MusicLibrary/Title-Images/Black_Balloons.jpg','assets/MusicLibrary/Title-Images/Lucid_Dreams.jpg','assets/MusicLibrary/Title-Images/Finesse_.jpg','assets/MusicLibrary/Title-Images/c27f3271d72101753459d141983058d3.1000x1000x1.jpg','assets/MusicLibrary/Title-Images/maxresdefault.jpg','https://ssle.ulximg.com/image/750x750/cover/1503707157_45eb9dfd951c445dad8362ca03ba1019.jpg/e8c34a0c568019676915c86bdc84209e/1503707157_1b6332c59b63ee85e7ee19157c68d91f.jpeg','assets/MusicLibrary/Title-Images/51wf0kkUARL._SS500.jpg','assets/MusicLibrary/Title-Images/download.jpeg','assets/MusicLibrary/Title-Images/220px-Flashinglights.png'];
 var songArtist = ['Pink','Jordy','Denzel Curry','Denzel Curry','Juice WRLD','Bruno Mars','Rich Brian','Doom','Joji','Travis Scott','Ed Sheeran','Kanye West']
 var position = 0;
 var isPlay =false;
 
 
 var yellow = document.getElementById("box1");
-var yellowGreen = document.getElementById("box6");
-var pink = document.getElementById("box9");
-var orange = document.getElementById("box15");
+var yellowGreen = document.getElementById("box2");
+var pink = document.getElementById("box3");
+var orange = document.getElementById("box4");
+var blue = document.getElementById("box5");
+var grey = document.getElementById("box6");
 
-var blue = document.getElementById("box2");
-var grey = document.getElementById("box3");
+var box7= document.getElementById("box7");
+var box8 = document.getElementById("box8");
+var box9 = document.getElementById("box9");
+var box10 = document.getElementById("box10");
+var box11 = document.getElementById("box11");
+var box12 = document.getElementById("box12");
+
+
 
 
 
@@ -152,6 +160,43 @@ blue.onclick = function(){
 
 grey.onclick = function(){
   position =0
+  togglePlay(songList[position],"play-img");
+  display()
+}
+
+
+box7.onclick = function(){
+  position =2
+  togglePlay(songList[position],"play-img");
+  display()
+}
+
+box8.onclick = function(){
+  position =11
+  togglePlay(songList[position],"play-img");
+  display()
+}
+
+box9.onclick = function(){
+  position =9
+  togglePlay(songList[position],"play-img");
+  display()
+}
+
+box10.onclick = function(){
+  position =5
+  togglePlay(songList[position],"play-img");
+  display()
+}
+
+box11.onclick = function(){
+  position =4
+  togglePlay(songList[position],"play-img");
+  display()
+}
+
+box12.onclick = function(){
+  position =10
   togglePlay(songList[position],"play-img");
   display()
 }
