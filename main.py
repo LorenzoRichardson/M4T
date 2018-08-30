@@ -4,7 +4,6 @@ import jinja2
 import users
 import music
 
-
 #remember, you can get this by searching for jinja2 google app engine
 jinja_current_dir = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
@@ -12,6 +11,7 @@ jinja_current_dir = jinja2.Environment(
     autoescape=True)
 
 current_user="zay"
+session_userDic = {"username": current_user, "profile_img": "/assets/MusicLibrary/Title-Images/placeholder.png"}
 
 
 class Login(webapp2.RequestHandler):
@@ -19,6 +19,17 @@ class Login(webapp2.RequestHandler):
     def get(self):
         start_template = jinja_current_dir.get_template("assets/Login/login.html")
         self.response.write(start_template.render())
+
+
+    def user_specifier(self, session_user):
+        # global current_user
+        # session_user = current_user
+        global session_userDic
+        session_userDic["username"] = session_user
+
+        if session_userDic["profile_img"] == "":
+            session_userDic["profile_img"] = "assets/Login/Images/mt4.png"
+
 
 
     def passw(self,passr,password):
@@ -91,9 +102,15 @@ class Login(webapp2.RequestHandler):
 
                 # return_template = jinja_current_dir.get_template("index.html")
                 # self.response.write(return_template.render(my_dic))
-                self.redirect("/result")
+
                 global current_user
                 current_user = name
+
+                global session_userDic
+                session_userDic["username"] = current_user
+
+                self.redirect("/result")
+
 
             else:
                 return_template = "user not found"
@@ -110,9 +127,12 @@ class Login(webapp2.RequestHandler):
 
                 # return_template = jinja_current_dir.get_template("index.html")
                 # self.response.write(return_template.render(my_dic))
-                self.redirect("/result")
-                current_user = name
 
+                current_user = name
+                global session_userDic
+                session_userDic["username"] = current_user
+
+                self.redirect("/result")
 
             else:
                 return_template = "user not found"
@@ -120,10 +140,14 @@ class Login(webapp2.RequestHandler):
 
 
 
+
+
 class WebStart(webapp2.RequestHandler):
     def get(self):
+        global session_userDic
         start_template = jinja_current_dir.get_template("index.html")
         myDic = {"key": music.playlist, "user": current_user}
+        myDic.update(session_userDic)
         self.response.write(start_template.render(myDic))
 
 

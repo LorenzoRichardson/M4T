@@ -27,6 +27,18 @@ body {
     background-color: grey;
 }
 
+
+#userPlace{
+  width: 50px;
+  /* height: auto; */
+}
+
+
+
+#userText{
+  float: center;
+}
+
 #play img{
 width:50px;
 
