@@ -32,7 +32,7 @@ var box12 = document.getElementById("box12");
 function display()
 {
 document.getElementById("Display").innerHTML = `    <div id="song-title">${songTitle[position]}
-                                                      <p><div id="song-artist">Zayslash</div></p>
+                                                      <p><div id="song-artist">${songArtist[position]}</div></p>
                                                            </div>
                                                     <img id="Display-img" src=${pictureList[position]}>`;
 

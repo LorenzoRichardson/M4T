@@ -3,6 +3,8 @@ import os
 import jinja2
 import users
 import music
+import userDic
+
 
 #remember, you can get this by searching for jinja2 google app engine
 jinja_current_dir = jinja2.Environment(
@@ -12,6 +14,15 @@ jinja_current_dir = jinja2.Environment(
 
 current_user="zay"
 session_userDic = {"username": current_user, "profile_img": "/assets/MusicLibrary/Title-Images/placeholder.png"}
+
+
+
+# def encrypt(password, shift):
+#     word = current_user[0]
+#     for i in password:
+#         i = i + word
+#
+
 
 
 class Login(webapp2.RequestHandler):
@@ -140,8 +151,6 @@ class Login(webapp2.RequestHandler):
 
 
 
-
-
 class WebStart(webapp2.RequestHandler):
     def get(self):
         global session_userDic
@@ -159,9 +168,21 @@ class songs(webapp2.RequestHandler):
         self.response.write(start_template.render(myDic))
 
 
+class userSettings(webapp2.RequestHandler):
+    def get(self):
+        global session_userDic
+        start_template = jinja_current_dir.get_template("templates/user.html")
+        myDic = {"key": music.playlist, "user": current_user}
+        myDic.update(session_userDic)
+        # if current_user == userDic.userSettings["userID"]:
+
+        self.response.write(start_template.render(myDic))
+
+
 
 app = webapp2.WSGIApplication([
     ('/', Login),
     ('/result', WebStart),
-    ('/song', songs)
+    ('/song', songs),
+    ('/user', userSettings)
 ], debug=True)
